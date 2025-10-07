@@ -27,6 +27,7 @@ const menuItems = [
   { title: 'Subcategories', url: '/dashboard/subcategories', icon: List },
   { title: 'Products', url: '/dashboard/products', icon: Package },
   { title: 'Orders', url: '/dashboard/orders', icon: ShoppingCart },
+  { title: 'Custom Orders', url: '/dashboard/custom-orders', icon: Package },
   { title: 'Analytics', url: '/dashboard/analytics', icon: BarChart3 },
 ];
 

@@ -11,6 +11,7 @@ import Categories from "./pages/Categories";
 import Subcategories from "./pages/Subcategories";
 import Products from "./pages/Products";
 import Orders from "./pages/Orders";
+import CustomOrders from "./pages/CustomOrders";
 import Analytics from "./pages/Analytics";
 import NotFound from "./pages/NotFound";
 
@@ -63,6 +64,14 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <Orders />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/dashboard/custom-orders"
+              element={
+                <ProtectedRoute>
+                  <CustomOrders />
                 </ProtectedRoute>
               }
             />
