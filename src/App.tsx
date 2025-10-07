@@ -8,6 +8,10 @@ import { ProtectedRoute } from "./components/ProtectedRoute";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Categories from "./pages/Categories";
+import Subcategories from "./pages/Subcategories";
+import Products from "./pages/Products";
+import Orders from "./pages/Orders";
+import Analytics from "./pages/Analytics";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,6 +39,38 @@ const App = () => (
               element={
                 <ProtectedRoute>
                   <Categories />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/dashboard/subcategories"
+              element={
+                <ProtectedRoute>
+                  <Subcategories />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/dashboard/products"
+              element={
+                <ProtectedRoute>
+                  <Products />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/dashboard/orders"
+              element={
+                <ProtectedRoute>
+                  <Orders />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/dashboard/analytics"
+              element={
+                <ProtectedRoute>
+                  <Analytics />
                 </ProtectedRoute>
               }
             />
