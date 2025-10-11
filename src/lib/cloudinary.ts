@@ -1,6 +1,6 @@
-export const CLOUDINARY_CLOUD_NAME = "djyny0qqn";
-export const CLOUDINARY_API_KEY = "153466438364967";
-export const CLOUDINARY_UPLOAD_PRESET = "pdf_ocr_preset";
+export const CLOUDINARY_CLOUD_NAME = "dglngtibt";
+export const CLOUDINARY_API_KEY = "922137155248629";
+export const CLOUDINARY_UPLOAD_PRESET = "HuskThreads";
 
 export const uploadToCloudinary = async (file: File): Promise<string> => {
   const formData = new FormData();
