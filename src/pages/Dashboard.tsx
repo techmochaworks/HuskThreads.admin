@@ -72,7 +72,7 @@ export default function Dashboard() {
   const statCards = [
     {
       title: 'Total Revenue',
-      value: `$${stats.totalRevenue.toFixed(2)}`,
+      value: `₹${stats.totalRevenue.toFixed(2)}`,
       icon: DollarSign,
       gradient: 'from-emerald-500 to-teal-600',
     },

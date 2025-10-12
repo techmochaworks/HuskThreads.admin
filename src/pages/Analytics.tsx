@@ -178,7 +178,7 @@ export default function Analytics() {
               <DollarSign className="h-4 w-4 text-green-500" />
             </CardHeader>
             <CardContent>
-              <div className="text-3xl font-bold">${analytics.totalRevenue.toFixed(2)}</div>
+              <div className="text-3xl font-bold">₹ {analytics.totalRevenue.toFixed(2)}</div>
             </CardContent>
           </Card>
           <Card className="border-border/50">
@@ -196,7 +196,7 @@ export default function Analytics() {
               <TrendingUp className="h-4 w-4 text-purple-500" />
             </CardHeader>
             <CardContent>
-              <div className="text-3xl font-bold">${analytics.averageOrderValue.toFixed(2)}</div>
+              <div className="text-3xl font-bold">₹{analytics.averageOrderValue.toFixed(2)}</div>
             </CardContent>
           </Card>
           <Card className="border-border/50">

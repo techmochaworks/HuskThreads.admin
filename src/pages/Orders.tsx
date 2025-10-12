@@ -72,7 +72,6 @@ export default function Orders() {
         ...doc.data(),
       })) as Order[];
       
-      // Sort by most recent first
       ordersData.sort((a, b) => {
         const dateA = a.createdAt?.toDate?.() || new Date(0);
         const dateB = b.createdAt?.toDate?.() || new Date(0);
@@ -177,7 +176,7 @@ export default function Orders() {
                       <TableCell>
                         {order.createdAt?.toDate?.()?.toLocaleDateString() || 'N/A'}
                       </TableCell>
-                      <TableCell className="font-medium">${order.totalAmount.toFixed(2)}</TableCell>
+                      <TableCell className="font-medium">₹{order.totalAmount.toFixed(2)}</TableCell>
                       <TableCell>
                         <Badge variant={getPaymentStatusColor(order.paymentStatus)}>
                           {order.paymentStatus}

@@ -354,7 +354,7 @@ export default function Products() {
                         )}
                       </TableCell>
                       <TableCell className="font-medium">{product.name}</TableCell>
-                      <TableCell>${product.price.toFixed(2)}</TableCell>
+                      <TableCell>₹{product.price.toFixed(2)}</TableCell>
                       <TableCell>{product.stock}</TableCell>
                       <TableCell><Badge variant={product.status === 'Active' ? 'default' : 'secondary'}>{product.status}</Badge></TableCell>
                       <TableCell className="text-right">
