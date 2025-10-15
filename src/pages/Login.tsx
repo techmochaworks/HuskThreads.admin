@@ -92,7 +92,7 @@ export default function Login() {
           </CardContent>
         </Card>
         <p className="mt-4 text-center text-sm text-muted-foreground">
-          Demo: saikiran@huskthreads.com / jonnysins@123
+          Demo: admin@huskthreads.com / admin@123
         </p>
       </div>
     </div>
