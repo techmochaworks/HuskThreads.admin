@@ -128,6 +128,11 @@ export default function Products() {
       toast.error('Please fill in all required fields');
       return;
     }
+     if (!formData.images) {
+      toast.error('Image upload failed');
+      return;
+    }
+    
 
     try {
       setUploading(true);
