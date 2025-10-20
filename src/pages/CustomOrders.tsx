@@ -7,7 +7,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Badge } from '@/components/ui/badge';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Eye, Trash2, Loader2 } from 'lucide-react';
+import { Eye, Trash2, Loader2, Image as ImageIcon } from 'lucide-react';
 import { toast } from 'sonner';
 import { format } from 'date-fns';
 
@@ -18,6 +18,7 @@ interface CustomOrder {
   customerName: string;
   customerPhone: string;
   designFileName: string;
+  designUrl: string; // This is the URL for the image
   notes: string;
   productType: string;
   quantity: number;
@@ -252,15 +253,30 @@ export default function CustomOrders() {
                 </div>
               </div>
 
-              <div>
-                <h3 className="font-semibold mb-1">Design File</h3>
-                <p className="text-muted-foreground">{selectedOrder.designFileName}</p>
+              {/* --- New Design File/Image View Section --- */}
+              <div className="border p-4 rounded-md">
+                <h3 className="font-semibold mb-2">Design File</h3>
+                <div className="flex justify-between items-center">
+                    <p className="text-muted-foreground truncate max-w-xs">{selectedOrder.designFileName}</p>
+                    {selectedOrder.designUrl && (
+                        <a 
+                            href={selectedOrder.designUrl} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-primary hover:underline flex items-center gap-1"
+                        >
+                            <ImageIcon className="h-4 w-4" />
+                            View Design
+                        </a>
+                    )}
+                </div>
               </div>
+              {/* --- End New Section --- */}
 
               {selectedOrder.notes && (
                 <div>
                   <h3 className="font-semibold mb-1">Notes</h3>
-                  <p className="text-muted-foreground">{selectedOrder.notes}</p>
+                  <p className="text-muted-foreground whitespace-pre-wrap">{selectedOrder.notes}</p>
                 </div>
               )}
 
